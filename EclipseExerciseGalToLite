@@ -1,0 +1,24 @@
+//Programa: GalToLit
+//Autor: Peterson Barros
+//Versão: 1, Maio 2023
+//Este programa faz a conversão de quantidade digitada pelo usuário de galões para litros
+
+package galToLit_Scanner;
+
+import java.util.Scanner;
+
+public class GalToLit_Scanner {
+
+	public static void main(String[] args) {
+		// declare as variáveis
+				System.out.print("Digite a quantidade de galões: ");
+				Scanner teclado = new Scanner(System.in);
+				double gallons=teclado.nextDouble();
+				double liters=0;
+				// adicione o cálculo aqui
+				liters=gallons*3.785;
+				// exiba o resultado para o usuário
+				System.out.println(gallons+" gallons equals "+liters+" liters");
+	}
+
+}
