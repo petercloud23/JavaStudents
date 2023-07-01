@@ -1,0 +1,45 @@
+//Programa: MediaCalculatorExample
+//Autor: Peterson Barros
+//Versão: 1, Maio 2023
+//Este programa solicita senha de acesso (senha123 inicial) e permite o cálculo de média de um aluno, retornando na tela o resultado
+import java.util.Scanner;
+
+public class ProjectSection4Extra {
+		public String senha = "senha123"; // Variable Declarations for this class
+		public String login;
+		public String x;
+		
+		public ProjectSection4Extra() {
+			RegistraSenha();
+			if (senha.equals("senha123")) {
+			System.out.println("Senha Aceita!");
+			System.out.println("Digite o nome do aluno: ");
+			Scanner student = new Scanner(System.in);
+			String aluno = student.next();
+			double x = Media();
+			System.out.print("A média do aluno " + aluno + " foi: " + x);	}
+			else
+				System.out.print("Senha Incorreta! Tente novamente.");	}
+		
+		public String RegistraSenha() {
+			System.out.println("Digite sua senha de acesso: ");
+			Scanner in = new Scanner(System.in);
+			senha = in.next();
+			return senha;		}
+		
+		public double Media() {
+			System.out.println("Digite a primeira nota:");
+			Scanner a = new Scanner(System.in);
+			double n1 = a.nextDouble();
+			System.out.println("Digite a segunda nota:");
+			Scanner b = new Scanner(System.in);
+			double n2 = b.nextDouble();
+			System.out.println("Digite a terceira nota");
+			Scanner c = new Scanner(System.in);
+			double n3 = c.nextDouble();
+			double media = (n1+n2+n3)/3;
+			return media;	}
+
+		public static void main(String[] args) {
+		ProjectSection4Extra user = new ProjectSection4Extra();	}
+}	
